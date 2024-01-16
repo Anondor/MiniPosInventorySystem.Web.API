@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\MiniPosInventorySystem.Web.API.props" />
+</Project>

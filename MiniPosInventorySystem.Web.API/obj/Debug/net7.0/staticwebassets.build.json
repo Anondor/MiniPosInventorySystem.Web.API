@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "jUBtLwRZbPXqA3OMqJxsGdT/ZLB2xjfR+QSobhY3eiY=",
+  "Source": "MiniPosInventorySystem.Web.API",
+  "BasePath": "_content/MiniPosInventorySystem.Web.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
