@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "49QY58+iDTZ53M9qTrqFZMGl4Xef3yw5WUNoiBn5wIcDKqC/3zggKm3HQXteMkIARVqYU1DW3C6GdmfgphEYTQ==",
+  "dgSpecHash": "UGrgXxh7UmzqO3uvJ7H8HA5M0F2Ku/s7drivqQbkvFLnHBjikZdQJH3BCzh7UUi1+ySr8pW3jBAdZXlONfeuYg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\azizul\\Desktop\\MiniPosInventorySystem.Web.API\\MiniPosInventorySystem.Web.API\\MiniPosInventorySystem.Web.API.csproj",
+  "projectFilePath": "C:\\Users\\azizul\\MiniPosInventorySystem.Web.API\\MiniPosInventorySystem.Web.API\\MiniPosInventorySystem.Web.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\azizul\\.nuget\\packages\\autowrapper.core\\4.5.1\\autowrapper.core.4.5.1.nupkg.sha512",
     "C:\\Users\\azizul\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",

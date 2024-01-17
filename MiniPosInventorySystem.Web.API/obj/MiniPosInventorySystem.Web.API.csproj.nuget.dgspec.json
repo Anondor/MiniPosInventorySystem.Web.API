@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\azizul\\Desktop\\MiniPosInventorySystem.Web.API\\MiniPosInventorySystem.Web.API\\MiniPosInventorySystem.Web.API.csproj": {}
+    "C:\\Users\\azizul\\MiniPosInventorySystem.Web.API\\MiniPosInventorySystem.Web.API\\MiniPosInventorySystem.Web.API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\azizul\\Desktop\\MiniPosInventorySystem.Web.API\\MiniPosInventorySystem.Web.API\\MiniPosInventorySystem.Web.API.csproj": {
+    "C:\\Users\\azizul\\MiniPosInventorySystem.Web.API\\MiniPosInventorySystem.Web.API\\MiniPosInventorySystem.Web.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\azizul\\Desktop\\MiniPosInventorySystem.Web.API\\MiniPosInventorySystem.Web.API\\MiniPosInventorySystem.Web.API.csproj",
+        "projectUniqueName": "C:\\Users\\azizul\\MiniPosInventorySystem.Web.API\\MiniPosInventorySystem.Web.API\\MiniPosInventorySystem.Web.API.csproj",
         "projectName": "MiniPosInventorySystem.Web.API",
-        "projectPath": "C:\\Users\\azizul\\Desktop\\MiniPosInventorySystem.Web.API\\MiniPosInventorySystem.Web.API\\MiniPosInventorySystem.Web.API.csproj",
+        "projectPath": "C:\\Users\\azizul\\MiniPosInventorySystem.Web.API\\MiniPosInventorySystem.Web.API\\MiniPosInventorySystem.Web.API.csproj",
         "packagesPath": "C:\\Users\\azizul\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\azizul\\Desktop\\MiniPosInventorySystem.Web.API\\MiniPosInventorySystem.Web.API\\obj\\",
+        "outputPath": "C:\\Users\\azizul\\MiniPosInventorySystem.Web.API\\MiniPosInventorySystem.Web.API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
