@@ -39,23 +39,20 @@ namespace MiniPosInventorySystem.Web.API.Controllers
         }
         
         [HttpGet]
-        public async Task<ActionResult<ApiResponse>> GetProducts(int pageNumber, int pageSize)
+        public async Task<ActionResult<ApiResponse>> GetProducts(int pageNumber, int pageSize, string? search)
         {
             var response = new ApiResponse();
             try
             {
-                var product = await _context.Products.Skip(pageSize * (pageNumber)).Take(pageSize).ToListAsync();
+                var productQuery =  _context.Products.Skip(pageSize * (pageNumber)).Take(pageSize);
 
-
-                if (product == null)
+                if (!string.IsNullOrWhiteSpace(search))
                 {
-                    response.Message = "Product not  found";
-                    response.IsError = true;
-                    response.StatusCode = (int)HttpStatusCode.NotFound;
-
-                    return response;
+                    productQuery = productQuery.Where(x => x.Name.Contains(search));
                 }
-                response.Result = product;
+                var productList =  await productQuery.ToListAsync();
+
+                response.Result = productList;
                 response.StatusCode = (int)HttpStatusCode.OK;
                 return response;
 
