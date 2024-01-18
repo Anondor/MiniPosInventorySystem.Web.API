@@ -37,15 +37,17 @@ namespace MiniPosInventorySystem.Web.API.Controllers
                 return response;
             }
         }
+        
         [HttpGet]
-        public async Task<ActionResult<ApiResponse>> GetProducts()
+        public async Task<ActionResult<ApiResponse>> GetProducts(int pageNumber, int pageSize)
         {
             var response = new ApiResponse();
             try
             {
-                var brand = await _context.Products.ToListAsync();
+                var product = await _context.Products.Skip(pageSize * (pageNumber)).Take(pageSize).ToListAsync();
 
-                if (brand == null)
+
+                if (product == null)
                 {
                     response.Message = "Product not  found";
                     response.IsError = true;
@@ -53,7 +55,7 @@ namespace MiniPosInventorySystem.Web.API.Controllers
 
                     return response;
                 }
-                response.Result = brand;
+                response.Result = product;
                 response.StatusCode = (int)HttpStatusCode.OK;
                 return response;
 
@@ -161,6 +163,8 @@ namespace MiniPosInventorySystem.Web.API.Controllers
 
 
         }
+
+
 
     }
 }
