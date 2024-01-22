@@ -26,6 +26,7 @@ namespace MiniPosInventorySystem.Web.API.Controllers
                 await _context.SaveChangesAsync();
 
                 response.StatusCode = (int)HttpStatusCode.OK;
+                response.Message = "brand data  save Succesfully";
                 return response;
             }
             catch (Exception ex)
@@ -81,6 +82,7 @@ namespace MiniPosInventorySystem.Web.API.Controllers
                     return response;
                 }
                 response.Result = brand;
+                response.Message = "brand Data  found";
                 response.StatusCode = (int)HttpStatusCode.OK;
                 return response;
             }
@@ -113,6 +115,7 @@ namespace MiniPosInventorySystem.Web.API.Controllers
                 _context.Brands.Update(dbModel);
                 await _context.SaveChangesAsync();
                 response.StatusCode = (int)HttpStatusCode.OK;
+                response.Message = "Brand Data Updated";
                 return response;
             }
             catch (Exception ex)
@@ -146,6 +149,7 @@ namespace MiniPosInventorySystem.Web.API.Controllers
 
                 }
                 _context.Brands.Remove(brand);
+                response.Message = "Brand Data  Remove";
                 await _context.SaveChangesAsync();
 
                 response.StatusCode = (int)HttpStatusCode.OK;
