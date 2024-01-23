@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using MiniPosInventorySystem.Web.API.Models;
+using System.Linq;
 using System.Net;
 
 namespace MiniPosInventorySystem.Web.API.Controllers
@@ -40,13 +41,22 @@ namespace MiniPosInventorySystem.Web.API.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<ApiResponse>> GetBrands()
+        public async Task<ActionResult<ApiResponse>> GetBrands(int? pageNumber, int? pageSize, string? name)
         {
             var response = new ApiResponse();
             try
             {
-                var brand = await _context.Brands.ToListAsync();
-
+                var brandQuery = _context.Brands.AsQueryable();
+                if(name!=null)
+                {
+                    brandQuery=brandQuery.Where(p => p.Name.Contains(name));
+                }
+                if (pageNumber!=null && pageSize!=null)
+                {
+                   brandQuery= brandQuery.Skip((int)(pageSize * (pageNumber))).Take((int)pageSize);
+                } 
+             
+                var brand= await brandQuery.ToListAsync();
                 if (brand == null)
                 {
                     response.Message = "brand not  found";
