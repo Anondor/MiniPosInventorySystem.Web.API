@@ -22,6 +22,11 @@ namespace MiniPosInventorySystem.Web.API
             get;
             set;
         }
+        public DbSet<Product> Products
+        {
+            get;
+            set;
+        }
 
     }
 }
