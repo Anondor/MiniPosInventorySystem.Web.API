@@ -159,10 +159,8 @@ namespace MiniPosInventorySystem.Web.API.Controllers
                     response.Message = "Product data is not found";
                     response.IsError = true;
                     return response;
-
                 }
                 _context.Products.Remove(product);
-                
                 await _context.SaveChangesAsync();
 
                 response.Message = "Product Data  Remove";
